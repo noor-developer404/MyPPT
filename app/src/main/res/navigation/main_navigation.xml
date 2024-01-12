@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.developer404.myppt.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_createPptFragment"
+            app:destination="@id/createPptFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.developer404.myppt.fragments.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_pptxFragment"
+            app:destination="@id/pptxFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPptFragment"
+        android:name="com.developer404.myppt.fragments.CreatePptFragment"
+        android:label="fragment_create_ppt"
+        tools:layout="@layout/fragment_create_ppt" />
+    <fragment
+        android:id="@+id/pptxFragment"
+        android:name="com.developer404.myppt.fragments.PptxFragment"
+        android:label="fragment_pptx"
+        tools:layout="@layout/fragment_pptx" />
+</navigation>
